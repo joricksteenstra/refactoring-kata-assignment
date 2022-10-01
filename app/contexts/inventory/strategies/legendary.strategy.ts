@@ -12,7 +12,7 @@ export class LegendaryStrategy implements InventoryStrategy {
   private static getUpdatedQualityOfItem(
     item: Item
   ): number {
-      return item.quality
+      return item.quality;
   }
 
   matchesStrategy(item: Item): boolean {
