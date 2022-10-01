@@ -7,11 +7,11 @@ export class ConjuredStrategy implements InventoryStrategy {
     return {
       ...item,
       sellIn: item.sellIn - 1,
-      quality: this.getUpdatedQualityOfItem(item)
+      quality: ConjuredStrategy.getUpdatedQualityOfItem(item)
     }
   }
 
-  getUpdatedQualityOfItem(item: Item): number {
+  private static getUpdatedQualityOfItem(item: Item): number {
     if (item.quality === 0) {
       return 0;
     }
@@ -24,6 +24,6 @@ export class ConjuredStrategy implements InventoryStrategy {
   }
 
   matchesStrategy(item: Item): boolean {
-    return item.name === "Conjured Mana Cake";
+    return item.name.toLowerCase().includes("conjured");
   }
 }

@@ -7,19 +7,20 @@ export class AgedBrieStrategy implements InventoryStrategy {
     return {
       ...item,
       sellIn: item.sellIn - 1,
-      quality: this.getUpdatedQualityOfItem(item)
+      quality: AgedBrieStrategy.getUpdatedQualityOfItem(item)
     }
   }
 
-  private getUpdatedQualityOfItem(
+  private static getUpdatedQualityOfItem(
     item: Item
   ): number {
     if (item.quality < 50) {
       if (item.sellIn < 0) {
-        return item.quality + 2
+        const updatedQuality = item.quality + 2;
+        return updatedQuality < 50 ? updatedQuality : 50
       }
 
-      return item.quality + 1
+      return item.quality + 1;
     }
 
     return 50;

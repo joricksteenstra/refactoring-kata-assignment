@@ -6,11 +6,11 @@ export class BackstagePassesStrategy implements InventoryStrategy {
     return {
       ...item,
       sellIn: item.sellIn - 1,
-      quality: this.getUpdatedQualityOfItem(item)
+      quality: BackstagePassesStrategy.getUpdatedQualityOfItem(item)
     }
   }
 
-  getUpdatedQualityOfItem(
+  private static getUpdatedQualityOfItem(
     item: Item
   ): number {
     if (item.sellIn < 0) {
@@ -23,7 +23,7 @@ export class BackstagePassesStrategy implements InventoryStrategy {
     }
 
     if (item.sellIn < 11) {
-      const quality = item.quality + 3;
+      const quality = item.quality + 2;
       return quality < 50 ? quality : 50;
     }
 
@@ -31,6 +31,6 @@ export class BackstagePassesStrategy implements InventoryStrategy {
   }
 
   matchesStrategy(item: Item): boolean {
-    return item.name === "Backstage passes to a TAFKAL80ETC concert";
+    return item.name.toLowerCase().includes("backstage passes");
   }
 }

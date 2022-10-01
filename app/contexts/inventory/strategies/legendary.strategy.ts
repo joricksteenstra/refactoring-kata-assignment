@@ -5,17 +5,17 @@ export class LegendaryStrategy implements InventoryStrategy {
   getUpdatedItem(item: Item): Item {
     return {
       ...item,
-      quality: this.getUpdatedQualityOfItem(item)
+      quality: LegendaryStrategy.getUpdatedQualityOfItem(item)
     }
   }
 
-  getUpdatedQualityOfItem(
+  private static getUpdatedQualityOfItem(
     item: Item
   ): number {
       return item.quality
   }
 
   matchesStrategy(item: Item): boolean {
-    return item.name === "Sulfuras, Hand of Ragnaros";
+    return item.name.toLowerCase().includes("sulfuras");
   }
 }

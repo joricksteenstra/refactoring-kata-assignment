@@ -16,17 +16,21 @@ export class InventoryContext {
   ];
 
   constructor(item: Item) {
-    this.inventoryStrategy = this.getStrategy(item)
+    this.inventoryStrategy = this.getStrategyForItem(item);
   }
 
   public updateQuality(item: Item): Item {
-    return this.inventoryStrategy.getUpdatedItem(item)
+    return this.getInventoryStrategy().getUpdatedItem(item);
   }
 
-  private getStrategy(item: Item) {
+  public getInventoryStrategy(): InventoryStrategy {
+    return this.inventoryStrategy;
+  }
+
+  private getStrategyForItem(item: Item) {
     for (const strategy of this.customQualityStrategies) {
       if (strategy.matchesStrategy(item)) {
-        return strategy
+        return strategy;
       }
     }
 

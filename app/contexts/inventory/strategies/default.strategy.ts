@@ -6,11 +6,11 @@ export class DefaultStrategy implements InventoryStrategy {
     return {
       ...item,
       sellIn: item.sellIn - 1,
-      quality: this.getUpdatedQualityOfItem(item)
+      quality: DefaultStrategy.getUpdatedQualityOfItem(item)
     }
   }
 
-  getUpdatedQualityOfItem(
+  private static getUpdatedQualityOfItem(
     item: Item
   ): number {
     if (item.quality === 0) {

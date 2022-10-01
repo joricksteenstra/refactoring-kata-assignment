@@ -1,4 +1,4 @@
-import {Item} from "../../../gilded-rose-refactored";
+import {Item} from "../../../gilded-rose-refactored"
 
 export interface InventoryStrategy {
   getUpdatedItem(item: Item): Item
