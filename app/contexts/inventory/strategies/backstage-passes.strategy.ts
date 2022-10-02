@@ -1,5 +1,6 @@
-import {Item} from "../../../gilded-rose-refactored";
+
 import {InventoryStrategy} from "./inventory.strategy";
+import {Item} from "@/gilded-rose";
 
 export class BackstagePassesStrategy implements InventoryStrategy {
   getUpdatedItem(item: Item): Item {
@@ -31,6 +32,6 @@ export class BackstagePassesStrategy implements InventoryStrategy {
   }
 
   matchesStrategy(item: Item): boolean {
-    return item.name.toLowerCase().includes("backstage passes");
+    return item.name === 'Backstage passes to a TAFKAL80ETC concert';
   }
 }

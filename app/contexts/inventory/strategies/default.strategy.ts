@@ -1,5 +1,5 @@
 import {InventoryStrategy} from "./inventory.strategy";
-import {Item} from "../../../gilded-rose-refactored";
+import {Item} from "@/gilded-rose";
 
 export class DefaultStrategy implements InventoryStrategy {
   getUpdatedItem(item: Item): Item {

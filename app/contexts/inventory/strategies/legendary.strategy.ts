@@ -1,5 +1,5 @@
 import {InventoryStrategy} from "./inventory.strategy";
-import {Item} from "../../../gilded-rose-refactored";
+import {Item} from "@/gilded-rose";
 
 export class LegendaryStrategy implements InventoryStrategy {
   getUpdatedItem(item: Item): Item {
@@ -16,6 +16,6 @@ export class LegendaryStrategy implements InventoryStrategy {
   }
 
   matchesStrategy(item: Item): boolean {
-    return item.name.toLowerCase().includes("sulfuras");
+    return item.name === "Sulfuras, Hand of Ragnaros";
   }
 }
