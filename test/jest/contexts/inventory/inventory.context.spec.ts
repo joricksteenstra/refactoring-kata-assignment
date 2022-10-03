@@ -1,6 +1,6 @@
 import {Item} from '@/gilded-rose';
 import {DefaultStrategy} from "@/contexts/inventory/strategies/default.strategy";
-import {InventoryManager} from "@/contexts/inventory/inventory.context";
+import {InventoryManager} from "@/contexts/inventory/inventory.manager";
 import {ConjuredStrategy} from "@/contexts/inventory/strategies/conjured.strategy";
 
 const createItem = (sellIn = 3, quality = 5, name = "Conjured Mana Cake") => {
