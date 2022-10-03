@@ -1,7 +1,7 @@
 import {Item} from '@/gilded-rose';
-import {DefaultStrategy} from "@/contexts/inventory/strategies/default.strategy";
-import {InventoryManager} from "@/contexts/inventory/inventory.manager";
-import {ConjuredStrategy} from "@/contexts/inventory/strategies/conjured.strategy";
+import {DefaultStrategy} from "@/managers/inventory/strategies/default.strategy";
+import {InventoryManager} from "@/managers/inventory/inventory.manager";
+import {ConjuredStrategy} from "@/managers/inventory/strategies/conjured.strategy";
 
 const createItem = (sellIn = 3, quality = 5, name = "Conjured Mana Cake") => {
   return {

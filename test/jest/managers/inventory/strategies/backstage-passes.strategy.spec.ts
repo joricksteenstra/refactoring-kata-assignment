@@ -1,5 +1,5 @@
 import {Item} from '@/gilded-rose';
-import {BackstagePassesStrategy} from "@/contexts/inventory/strategies/backstage-passes.strategy";
+import {BackstagePassesStrategy} from "@/managers/inventory/strategies/backstage-passes.strategy";
 
 const createItem = (sellIn = 3, quality = 5, name = "Backstage passes to a TAFKAL80ETC concert") => {
   return {

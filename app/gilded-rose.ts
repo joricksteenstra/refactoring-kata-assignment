@@ -1,4 +1,4 @@
-import {InventoryManager} from "./contexts/inventory/inventory.manager";
+import {InventoryManager} from "./managers/inventory/inventory.manager";
 
 export class Item {
   name: string;

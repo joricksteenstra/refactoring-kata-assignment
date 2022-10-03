@@ -1,5 +1,5 @@
 import {Item} from '@/gilded-rose';
-import {ConjuredStrategy} from "@/contexts/inventory/strategies/conjured.strategy";
+import {ConjuredStrategy} from "@/managers/inventory/strategies/conjured.strategy";
 
 const createItem = (sellIn = 3, quality = 5, name = "Conjured Mana Cake") => {
   return {

@@ -1,5 +1,5 @@
 import {Item, GildedRose} from '@/gilded-rose';
-import {AgedBrieStrategy} from "@/contexts/inventory/strategies/aged-brie.strategy";
+import {AgedBrieStrategy} from "@/managers/inventory/strategies/aged-brie.strategy";
 
 const createItem = (sellIn = 3, quality = 5, name = "Aged Brie") => {
   return {

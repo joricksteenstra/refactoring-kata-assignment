@@ -1,5 +1,5 @@
 import {Item} from '@/gilded-rose';
-import {LegendaryStrategy} from "@/contexts/inventory/strategies/legendary.strategy";
+import {LegendaryStrategy} from "@/managers/inventory/strategies/legendary.strategy";
 
 const createItem = (sellIn = 3, quality = 5, name = "Sulfuras, Hand of Ragnaros") => {
   return {
