@@ -1,1 +1,1 @@
-export const MAX_QUALITY_ITEM = 50
+export const MAX_QUALITY_ITEM = 50;

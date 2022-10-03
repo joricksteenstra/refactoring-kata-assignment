@@ -34,6 +34,6 @@ export class InventoryManager {
       }
     }
 
-    return new DefaultStrategy()
+    return new DefaultStrategy();
   }
 }
