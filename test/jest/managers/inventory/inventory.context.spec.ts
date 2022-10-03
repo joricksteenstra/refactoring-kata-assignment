@@ -21,7 +21,6 @@ describe('Inventory Context', () => {
     expect(inventoryStrategy).toBeInstanceOf(DefaultStrategy);
   });
 
-  // todo mock Strategy
   it('sets strategy to conjured when it matches', () => {
     const item: Item = createItem(2,1, "Conjured")
     const inventoryContext = new InventoryManager(item);
