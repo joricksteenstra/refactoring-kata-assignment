@@ -16,9 +16,29 @@ const dataSet = [
     expectedQuality: 1
   },
   {
+    currentQuality: 2,
+    sellIn: 0,
+    expectedQuality: 1
+  },
+  {
+    currentQuality: 0,
+    sellIn: 1,
+    expectedQuality: 0
+  },
+  {
     currentQuality: 5,
     sellIn: -1,
     expectedQuality: 3
+  },
+  {
+    currentQuality: 1,
+    sellIn: -1,
+    expectedQuality: 0
+  },
+  {
+    currentQuality: 0,
+    sellIn: -1,
+    expectedQuality: 0
   },
 ]
 

@@ -6,7 +6,7 @@ import {ConjuredStrategy} from "./strategies/conjured.strategy";
 import {LegendaryStrategy} from "./strategies/legendary.strategy";
 import {Item} from "@/gilded-rose";
 
-export class InventoryContext {
+export class InventoryManager {
   private readonly inventoryStrategy: InventoryStrategy;
   private customQualityStrategies: InventoryStrategy[] = [
     new AgedBrieStrategy(),

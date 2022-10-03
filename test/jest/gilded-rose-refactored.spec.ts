@@ -1,6 +1,5 @@
 import {GildedRose, Item} from "@/gilded-rose";
 
-
 const items = [
   new Item("+5 Dexterity Vest", 10, 20), //
   new Item("+5 Dexterity Vest", -1, 20), //

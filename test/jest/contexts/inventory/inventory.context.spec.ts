@@ -1,6 +1,6 @@
 import {Item} from '@/gilded-rose';
 import {DefaultStrategy} from "@/contexts/inventory/strategies/default.strategy";
-import {InventoryContext} from "@/contexts/inventory/inventory.context";
+import {InventoryManager} from "@/contexts/inventory/inventory.context";
 import {ConjuredStrategy} from "@/contexts/inventory/strategies/conjured.strategy";
 
 const createItem = (sellIn = 3, quality = 5, name = "Conjured Mana Cake") => {
@@ -14,7 +14,7 @@ const createItem = (sellIn = 3, quality = 5, name = "Conjured Mana Cake") => {
 describe('Inventory Context', () => {
   it('sets strategy to default', () => {
     const item: Item = createItem(2,1, "tdfsa")
-    const inventoryContext = new InventoryContext(item);
+    const inventoryContext = new InventoryManager(item);
 
     const inventoryStrategy = inventoryContext.getInventoryStrategy();
 
@@ -24,7 +24,7 @@ describe('Inventory Context', () => {
   // todo mock Strategy
   it('sets strategy to conjured when it matches', () => {
     const item: Item = createItem(2,1, "Conjured")
-    const inventoryContext = new InventoryContext(item);
+    const inventoryContext = new InventoryManager(item);
 
     const inventoryStrategy = inventoryContext.getInventoryStrategy();
 

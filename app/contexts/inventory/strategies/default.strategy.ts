@@ -6,23 +6,21 @@ export class DefaultStrategy implements InventoryStrategy {
     return {
       ...item,
       sellIn: item.sellIn - 1,
-      quality: DefaultStrategy.getUpdatedQualityOfItem(item)
+      quality: this.getUpdatedQualityOfItem(item)
     }
   }
 
-  private static getUpdatedQualityOfItem(
+  private getUpdatedQualityOfItem = (
     item: Item
-  ): number {
-    if (item.quality === 0) {
-      return 0;
-    }
+  ): number => {
+    let updatedQuality = item.quality - 1;
 
     if (item.sellIn < 0) {
-       return (item.quality - 2) < 0 ? 0 : (item.quality - 2);
+      updatedQuality--
     }
 
-    return (item.quality - 1) < 0 ? 0 : (item.quality - 1);
-  }
+    return (updatedQuality < 0) ? 0 : updatedQuality;
+  };
 
   matchesStrategy(item: Item): boolean {
     return false;

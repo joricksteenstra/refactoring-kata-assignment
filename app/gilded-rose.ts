@@ -1,4 +1,4 @@
-import {InventoryContext} from "./contexts/inventory/inventory.context";
+import {InventoryManager} from "./contexts/inventory/inventory.manager";
 
 export class Item {
   name: string;
@@ -20,6 +20,6 @@ export class GildedRose {
   }
 
   updateQuality() {
-    this.items = this.items.map((item: Item) => new InventoryContext(item).updateQuality(item));
+    this.items = this.items.map((item: Item) => new InventoryManager(item).updateQuality(item));
   }
 }
